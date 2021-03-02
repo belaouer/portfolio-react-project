@@ -1,14 +1,27 @@
 import React from 'react';
 import AboutUS from './pages/AboutUs';
+import ContactUS from './pages/ContactUs';
+import OurWork from './pages/OurWork';
 import GlobalStyle from './components/GlobalStyle';
 import Nav from './components/Nav';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle/>
       <Nav/>
-      <AboutUS/>
+      <Switch>
+        <Route path="/" exact>
+          <AboutUS/>
+        </Route>
+        <Route path="/work">
+          <OurWork/>
+        </Route>
+        <Route path="contact">
+          <ContactUS/>
+        </Route>
+      </Switch>
     </div>
   );
 }
