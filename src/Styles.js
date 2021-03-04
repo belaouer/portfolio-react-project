@@ -19,6 +19,15 @@ export const Description = styled.div`
     }
 `;
 
+export const ServDescri = styled.div`
+    flex: 1;
+    padding-left: 5rem;
+    z-index: 2;
+    h2{
+        font-weight: lighter;
+    }
+`;
+
 export const Image = styled.div`
     flex:1;
     overflow:hidden;

@@ -1,43 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
 import {About} from '../Styles';
+import Toggle from './Toggle';
+import {AnimateSharedLayout} from 'framer-motion';
 
 const FaqSection = () => {
     return (
         <Faq>
             <h2>Any Questions <span>FAQ</span></h2>
-            <div className="question">
-                <h4>How Do I Start</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Daily schedul</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Diferrent Payement Methods</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>What Product Do You Offert</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
+            <AnimateSharedLayout>
+                <Toggle title="How Do I Start">
+                    <div className="question">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
+                        </div>
+                    </div>
+                </Toggle>
+                <Toggle title="Daily schedul">
+                    <div className="question">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
+                        </div>
+                    </div>
+                </Toggle>
+                <Toggle title="Diferrent Payement Methods">
+                    <div className="question">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
+                        </div>
+                    </div>
+                </Toggle>
+                <Toggle title="What Product Do You Offert">
+                    <div className="question">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores molestiae quae ducimus veritatis maiores.</p>
+                        </div>
+                    </div>
+                </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     )
 }

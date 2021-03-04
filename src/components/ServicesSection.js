@@ -5,13 +5,16 @@ import money from '../img/money.svg';
 import teamwork from '../img/teamwork.svg';
 import home2 from '../img/home2.png';
 import styled from 'styled-components'; 
-import {About, Description, Image, Hide} from '../Styles';
+import {About, ServDescri, Image, Hide} from '../Styles';
 
 
 const ServicesSection = () => {
     return (
         <Services>
-            <Description>
+            <Image>
+                <img src={home2} alt="home2"/>
+            </Image>
+            <ServDescri>
                 <h2>High <span>quality</span> services</h2>
                 <Cards>
                     <Card>
@@ -43,10 +46,7 @@ const ServicesSection = () => {
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, distinctio?</p>
                     </Card>
                 </Cards>
-            </Description>
-            <Image>
-                <img src={home2} alt="home2"/>
-            </Image>
+            </ServDescri>
         </Services>
     );
 };
@@ -72,7 +72,7 @@ const Card = styled.div`
         display:flex;
         align-items:center;
         h3{
-            margin-left: 1rem;
+            margin:0rem 1rem;
             background: white;
             color: black;
             padding: 1rem;
